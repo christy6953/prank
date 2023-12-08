@@ -9,10 +9,10 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 50px;
-            background-image: url('https://png.pngtree.com/background/20230520/original/pngtree-animated-christmas-snow-scene-for-desktop-backgrounds-free-picture-image_2676368.jpg'); /* Replace 'christmas-background.jpg' with your image file */
+            background-image: url('https://png.pngtree.com/background/20230520/original/pngtree-animated-christmas-snow-scene-for-desktop-backgrounds-free-picture-image_2676368.jpg'); /* Replace with your provided URL */
             background-size: cover;
             background-position: center;
-            color: #ffffff; /* Set text color to white for better visibility */
+            color: #000000; /* Set text color to black */
         }
         #puzzle {
             font-size: 18px;
@@ -44,14 +44,14 @@
         function checkAnswer() {
             var answer = document.getElementById("answer").value.toLowerCase();
 
-            if (answer === "piano") {
+            if (answer === "piano" || answer === "keyboard") {
                 // Correct answer, redirect to the clue page
                 window.location.href = "clue.html";
             } else {
-                alert("Oops! That's not the correct answer. Try again!");
+                // Incorrect answer, redirect to the wrong answer page
+                window.location.href = "wrong_answer.html";
             }
         }
     </script>
 </body>
 </html>
-
