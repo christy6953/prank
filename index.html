@@ -4,11 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secret Santa Surprise</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-image: url('https://png.pngtree.com/background/20230520/original/pngtree-animated-christmas-snow-scene-for-desktop-backgrounds-free-picture-image_2676368.jpg'); /* Replace 'christmas-background.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; /* Set text color to white for better visibility */
+        }
+        #puzzle {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        input {
+            margin-top: 10px;
+            padding: 5px;
+        }
+        button {
+            padding: 8px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div style="text-align: center; padding: 50px;">
+    <div>
         <h1>Hi, I'm your Secret Santa!</h1>
-        <p>Click <a href="clue.html">here</a> to get the clue.</p>
+        <p>Before you get the clue, solve this puzzle:</p>
+        <div id="puzzle">What has keys but can't open locks?</div>
+        <input type="text" id="answer" placeholder="Your answer">
+        <button onclick="checkAnswer()">Submit Answer</button>
     </div>
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value.toLowerCase();
+
+            if (answer === "piano") {
+                // Correct answer, redirect to the clue page
+                window.location.href = "clue.html";
+            } else {
+                alert("Oops! That's not the correct answer. Try again!");
+            }
+        }
+    </script>
 </body>
 </html>
+
